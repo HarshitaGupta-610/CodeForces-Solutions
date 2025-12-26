@@ -5,6 +5,7 @@ int main() {
     int a, b, c;
     if (!(cin >> a >> b >> c)) {
         return 0;
+        //base
     }
     vector<int> v = {a, b, c};
     sort(v.begin(), v.end());
