@@ -2,7 +2,7 @@
 using namespace std;
 
 string to_lower(string s) {
-    for (char c : s){
+    for (char &c : s){ 
         c = tolower(c);
     }
     return s;
@@ -17,10 +17,10 @@ int main(){
       s = to_lower(s);
 
       if (s == "yes"){
-         cout << "YES\n";
+         cout << "YES"<<endl;
       }
       else{
-         cout << "NO\n";
+         cout << "NO"<<endl;
       }
    }
 }
