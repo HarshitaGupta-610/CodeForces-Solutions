@@ -1,24 +1,23 @@
-#include <iostream>
-#include <cctype>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
     string s;
-    cin >> s;
-    int n = s.size();
-    int i = n - 1;
+    getline(cin, s);
+
+    int i = s.size() - 1;
 
     while (i >= 0 && !isalpha(s[i])) {
         i--;
     }
 
-    char c = tolower(s[i]);  
+    char last = tolower(s[i]);  
 
-    if (c == 'a' || c == 'o' || c == 'e' || c == 'i' || c == 'u' || c == 'y') {
+   
+    if (last=='a' || last=='e' || last=='i' || last=='o' || last=='u' || last=='y')
         cout << "YES\n";
-    } else {
+    else
         cout << "NO\n";
-    }
 
     return 0;
 }
