@@ -1,2 +1,2 @@
 # CodeForces-Solutions
-Practicing CP!
+Practicing CP and enhancing thinking skills!
