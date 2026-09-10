@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+long long t;
+cin >> t; // Read the number of test cases
+while (t--)
+{
+long long n;
+cin >> n; 
+long long best_a = 1;
+long long best_b = n - 1;
+for (long long i = 2; i * i <= n; i++){
+if (n % i == 0){
+    best_a = n / i;
+    best_b = n - best_a;
+    break;
+			}
+		}
+		cout << best_a << " " << best_b<< endl;
+	}
+	return 0;
+}
