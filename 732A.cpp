@@ -1,19 +1,14 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-int main() {
-    int k, r;
-    cin >> k >> r;
-
-    int n = 1;
-    while (true) {
-        int lastDigit = (n * k) % 10;
-
-        if (lastDigit == 0 || lastDigit == r) {
-            cout << n;
+int main(){
+    int k,r;
+    cin>>k>>r;
+    for(int i=1; i<=10; i++){
+        if(i*k%10==0 || i*k%10==r){
+            cout<<i;
             break;
         }
-
-        n++;
     }
+
+    return 0;
 }
