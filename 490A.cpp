@@ -1,32 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main(){
     int n;
-    cin >> n;
-    vector<int> t(n);
+    cin>>n;
 
-    vector<int> p, m, s;  
+    vector<int> a[4]; // a[1], a[2], a[3] store student indices
 
-    for (int i = 0; i < n; i++) {
-        cin >> t[i];
-        if (t[i] == 1){
-          p.push_back(i + 1);
-        }
-        else if (t[i] == 2) {
-         m.push_back(i + 1);
-        }
-        else{
-         s.push_back(i + 1);
-        } 
+    for(int i=1;i<=n;i++){
+        int x;
+        cin>>x;
+        a[x].push_back(i); // Store this student's index in their skill group
     }
 
-    int teams = min({ p.size(), m.size(), s.size() });
+    int teams=min({a[1].size(),a[2].size(),a[3].size()});
 
-    cout << teams << "\n";
+    cout<<teams<<endl;
 
-    for (int i = 0; i < teams; i++) {
-        cout << p[i] << " " << m[i] << " " << s[i] << "\n";
+    for(int i=0;i<teams;i++){
+        cout<<a[1][i]<<" "<<a[2][i]<<" "<<a[3][i]<<endl;
     }
 
     return 0;
